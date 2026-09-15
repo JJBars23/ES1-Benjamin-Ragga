@@ -45,9 +45,32 @@ def home(request):
 
 
 def detalle(request, plato_id):
-    plato = next((p for p in PLATOS if p["id"] == plato_id), None)
+    plato = None
+    for item in PLATOS:
+        if item['id'] == plato_id:
+            plato = item
+            break
+
     if plato is None:
         raise Http404('Plato no encontrado')
-    return render(request, 'detalle.html', {'plato': plato})
+
+    precio_con_propina = round(plato['precio'] * 1.10)
+
+    if plato['vegetariano'] and not plato['picante']:
+        etiqueta = 'Apto para todos'
+    elif plato['picante']:
+        etiqueta = 'Contiene aji'
+    else:
+        etiqueta = 'Plato tradicional'
+
+    return render(
+        request,
+        'detalle.html',
+        {
+            'plato': plato,
+            'precio_con_propina': precio_con_propina,
+            'etiqueta': etiqueta,
+        },
+    )
 
 
