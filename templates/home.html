@@ -1,21 +1,31 @@
 {% extends 'base.html' %}
 
+{% block title %}La caleta{% endblock %}
+
 {% block content %}
-            <div class="row">
+    <div class="container my-4">
+        <div class="row g-4">
+            {% for plato in platos %}
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card m-3">
+                    <div class="card h-100 shadow-sm">
                         <img
                             src="https://www.elsalvador.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-30-at-10.51.47-AM.jpeg"
                             class="card-img-top"
-                            alt="..."
+                            alt="{{ plato.nombre }}"
+                            style="height: 220px; object-fit: cover;"
                         />
-                        <div class="card-body">
-                            <h5 class="card-title">Plato 1</h5>
-                            <p class="card-text">
-                                Alguna extrañesa culinaria.
-                            </p>
-                            <a href="{% url 'detalle' %}" class="btn btn-primary center">Go somewhere</a>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ plato.nombre }}</h5>
+                            <p class="card-text">{{ plato.descripcion }}</p>
+                            <a href="{% url 'detalle' plato.id %}" class="btn btn-primary mt-auto">Ver detalle</a>
                         </div>
                     </div>
                 </div>
+            {% empty %}
+                <div class="col-12">
+                    <p class="text-center">No hay platos disponibles.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock content %}

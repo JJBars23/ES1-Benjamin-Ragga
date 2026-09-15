@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
     <head>
-        <title>Title</title>
+        <title>{% block title %}La caleta{% endblock %}</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,7 @@
 
     <body>
         <header>
-            <div class="alert alert-info container text-center p-3">La caleta</div>
+            <div class="alert alert-info container text-center mt-3">La caleta</div>
         </header>
         <main>
             {% block content %}

@@ -21,5 +21,5 @@ from Caleta import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('detalle/', views.detalle, name='detalle'),
+    path('plato/<int:plato_id>/', views.detalle, name='detalle'),
 ]
