@@ -19,7 +19,12 @@
 
     <body>
         <header>
-            <div class="alert alert-info container text-center mt-3">La caleta</div>
+            <div class="alert alert-info container mt-3">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <img src="{% static 'Imagenes/logo.svg' %}" alt="Logo La caleta" width="48" height="48" />
+                    <span class="fw-bold">La caleta</span>
+                </div>
+            </div>
         </header>
         <main>
             {% block content %}

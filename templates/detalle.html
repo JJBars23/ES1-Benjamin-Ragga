@@ -6,12 +6,6 @@
     <div class="container my-4">
         <a href="{% url 'home' %}" class="btn btn-danger mb-3">Volver</a>
         <div class="card shadow-sm">
-            <img
-                src="https://www.elsalvador.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-30-at-10.51.47-AM.jpeg"
-                class="card-img-top"
-                alt="{{ plato.nombre }}"
-                style="height: 400px; object-fit: cover;"
-            />
             <div class="card-body">
                 <h5 class="card-title">{{ plato.nombre }}</h5>
                 <p class="card-text"><strong>Categoría:</strong> {{ plato.categoria }}</p>

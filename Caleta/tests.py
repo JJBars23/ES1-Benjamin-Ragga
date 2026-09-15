@@ -8,6 +8,10 @@ class CaletaViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'La caleta')
         self.assertContains(response, 'Ceviche de reineta')
+        self.assertContains(response, 'Precio promedio de la carta')
+        self.assertContains(response, '$7850')
+        self.assertContains(response, 'Platos vegetarianos')
+        self.assertContains(response, '4')
 
     def test_detail_page_loads(self):
         response = self.client.get(reverse('detalle', args=[1]))

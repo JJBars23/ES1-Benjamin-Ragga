@@ -30,7 +30,18 @@ PLATOS = [
 
 
 def home(request):
-    return render(request, 'home.html', {'platos': PLATOS})
+    total_precios = sum(plato['precio'] for plato in PLATOS)
+    precio_promedio = round(total_precios / len(PLATOS))
+    cantidad_vegetarianos = sum(1 for plato in PLATOS if plato['vegetariano'])
+    return render(
+        request,
+        'home.html',
+        {
+            'platos': PLATOS,
+            'precio_promedio': precio_promedio,
+            'cantidad_vegetarianos': cantidad_vegetarianos,
+        },
+    )
 
 
 def detalle(request, plato_id):
