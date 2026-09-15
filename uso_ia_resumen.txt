@@ -1,0 +1,14 @@
+Resumen del uso de la IA en el proyecto
+
+Se utilizó la IA como apoyo para:
+- revisar y corregir errores de Django en templates, rutas y vistas;
+- identificar fallas de renderizado y de URL reversa;
+- sugerir y validar la estructura correcta de templates heredados con base.html;
+- ayudar a crear la lógica de negocio en las vistas, como cálculos de promedio y conteos;
+- implementar validaciones con Http404 y condiciones if/elif/else;
+- ajustar el diseño visual con Bootstrap y CSS personalizado;
+- mejorar la legibilidad y coherencia del estilo visual (tipografía, colores y espaciado);
+- añadir un logo cargado con {% static %} y mantener la organización de archivos estáticos;
+- preparar pruebas automatizadas con Django para comprobar que la aplicación sigue funcionando.
+
+En resumen, la IA se usó como asistente de programación para depurar, estructurar y mejorar la aplicación de manera rápida y consistente, sin reemplazar la lógica y validación final del proyecto.
