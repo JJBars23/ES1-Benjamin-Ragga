@@ -1,13 +1,18 @@
 body {
     background: linear-gradient(180deg, #fffaf1 0%, #f8f3ec 100%);
-    color: #1f2937;
+    color: #1b1b1b;
     font-family: Arial, sans-serif;
+    font-size: 1.02rem;
+    font-weight: 600;
 }
 
 header .alert {
     background: #fff;
     border: 1px solid #e7d9be;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
 }
 
 .card {
@@ -52,7 +57,17 @@ header .alert {
 }
 
 h5.card-title {
-    color: #3a2e2a;
+    color: #2b1d18;
+    font-weight: 800;
+    font-size: 1.35rem;
+}
+
+.card-text,
+.alert,
+.btn,
+label,
+strong {
+    color: #7c3f00;
     font-weight: 700;
 }
 
